@@ -4,10 +4,10 @@ import { Container, Header, Content, Accordion, Icon, Body, Left, Title, Subtitl
 import { Button } from "react-native-elements";
 import PageHeader from "./../pageheader/pageheader.js"
 import { datatill } from "./../data/data.js"
+import {mapStateToProps} from "./../../store/selector.js"
+import { connect } from "react-redux";
 
-
-
-export default class AccordionTills extends Component {
+class AccordionTills extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -94,11 +94,11 @@ export default class AccordionTills extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar hidden={true}/>
+        
         <Container style={styles.padder}>
           <PageHeader navigation={this.props.navigation}/>
           <Content padder >
-            <Text>Etat des caisses</Text>
+            <Text>Etat des caisses{console.log(this.props.loggedIn)}</Text>
             <Accordion
               dataArray={datatill}
               renderHeader={this._renderHeader}
@@ -110,6 +110,8 @@ export default class AccordionTills extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(AccordionTills);
 
 const styles = StyleSheet.create({
   container: {

@@ -6,6 +6,7 @@ import { Icon } from "native-base";
 import TabNav from './../tabnav/tabnav.js';
 import { Text, View } from 'react-native';
 
+
 const Drawer = createDrawerNavigator({
 
   Main: {
@@ -60,6 +61,5 @@ const Drawer = createDrawerNavigator({
   headerTitle: 'Main Screen Header',
 
 });
-
 
 export default Drawer;
