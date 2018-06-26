@@ -1,6 +1,5 @@
 import React from 'react';
 import {createDrawerNavigator} from 'react-navigation';
-import Main from './../main/main.js';
 // import { Icon } from 'react-native-elements';
 import { Icon } from "native-base";
 import TabNav from './../tabnav/tabnav.js';
